@@ -32,3 +32,35 @@ How would you like to authenticate with the ACME CA?
 -------------------------------------------------------------------------------
 Select the appropriate number [1-3] then [enter] (press 'c' to cancel): 3
 ```
+
+```
+Select the webroot for diydumbdumb.com:
+-------------------------------------------------------------------------------
+1: Enter a new webroot
+-------------------------------------------------------------------------------
+Press 1 [enter] to confirm the selection (press 'c' to cancel): 1
+Input the webroot for diydumbdumb.com: (Enter 'c' to cancel): /var/www/html
+```
+
+### Setup Auto-Renew
+
+1. Move `certbot-auto` to `/lib` so that you don't accidentally delete it.
+
+```
+sudo mv ~/certbot-auto /lib
+```
+
+2. use `crontab -e` to open vi so that you can make a new cron job
+
+```
+crontab -e
+```
+
+3. Press `i` to enter insert mode, and add the following cron job to run auto renew twice every day at 3am and 3pm:
+
+```
+0 3,15 * * * /lib/certbot-auto renew
+```
+
+4: Save and quit vi with `:wq`
+
