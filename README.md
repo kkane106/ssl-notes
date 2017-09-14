@@ -12,10 +12,13 @@ sudo yum install -y httpd24
 
 ### Second, make sure the instance has an elastic IP
 
-### Third, point an actual DNS at it (you can't do this with a bare IP)
+### Third, point an actual DNS at the elastice IP (you can't do this with a bare IP)
 
+### Fourth, wait for your DNS to resolve to the IP
 
-### Fourth do this...
+* Basically, just keep refreshing your DNS until content from your apache server shows up (e.g. apache test page or the index.html you created)
+
+### Fifth do this...
 
 Install
 Since it doesn't seem like your operating system has a packaged version of Certbot, you should use our certbot-auto script to get a copy:
