@@ -4,7 +4,7 @@
 
 ### EC2 Instance & Security Group Configuration
 
-* Launch an EC2 instance, and configure it's security group with the following rules:
+* Launch an EC2 instance, and configure it's security group with the following rules (*.*.*.*.* is your IP address):
 
 * Required:
 
@@ -61,14 +61,14 @@
   <td>TCP</td>
   <td>8080</td>
   <td>My IP</td>
-  <td>\*.\*.\*.\*</td>
+  <td>*.*.*.*.*</td>
 </tr>
 <tr>
   <td>MySQL / Aurora</td>
   <td>TCP</td>
   <td>3306</td>
   <td>My IP</td>
-  <td>\*.\*.\*.\*</td>
+  <td>*.*.*.*.*</td>
 </tr>
 </tbody>
 </table>
