@@ -2,6 +2,12 @@
 
 ### First, setup an instance if you have not done so already...
 
+---> USE httpd24!!!
+
+```
+sudo yum install -y httpd24
+```
+
 #### https://github.com/SkillDistillery/SD11/tree/master/unit_2/week1/AWS-EC2-Apache
 
 ### Second, make sure the instance has an elastic IP
